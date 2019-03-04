@@ -1,4 +1,5 @@
 <ion-content class="content">
+   
   <ion-card *ngFor="let repo of resultList" class="example-card">
     <ion-card-header>
       <ion-card-title>{{repo.full_name| uppercase}}</ion-card-title>
@@ -14,4 +15,6 @@
      <a href="{{repo.html_url}}">Go to repo</a>
     </ion-card-content>
   </ion-card>
+
+  
 </ion-content>

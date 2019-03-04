@@ -1,8 +1,11 @@
 
     <form #From="ngForm" >
-        <ion-item>
+        <ion-item margin-bottom>
+                <ion-icon name="search" ></ion-icon>
         <ion-input name="name" [(ngModel)]="name"> </ion-input>
    
-        </ion-item>
-        <ion-button  type="submit" value="Send" (click)=enviar() color="dark">Submit</ion-button>
+        </ion-item >
+       
+        <ion-button padding-start color="secondary"
+         type="submit" value="Send" (click)=enviar() >  Submit  <ion-icon name="send"></ion-icon></ion-button>
       </form>
