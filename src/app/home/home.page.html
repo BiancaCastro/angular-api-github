@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Awesome Github Search
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <app-github-search (propiedad_pasar)="recibir_datos($event)" ></app-github-search>
+   <ion-title *ngIf="info_search">You want to search: {{info_search}}</ion-title>
+    <app-github-search-results [resultList]="repos"></app-github-search-results>
+</ion-content>
+
