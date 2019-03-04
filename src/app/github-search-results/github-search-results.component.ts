@@ -14,4 +14,7 @@ export class GithubSearchResultsComponent implements OnInit {
   }
   ngOnInit() {}
 
+  change(){
+    console.log("entra")
+  }
 }
