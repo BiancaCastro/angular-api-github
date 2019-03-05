@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card>
+    <ion-card >
         <ion-card-header>
           <ion-card-subtitle>Forks:{{repo.forks}}</ion-card-subtitle>
           <ion-card-title>{{repo.name}}</ion-card-title>
@@ -18,7 +18,6 @@
             <ion-avatar item-start>
                 <ion-img [src]="repo.owner.avatar_url"></ion-img>
               </ion-avatar>
-              <p>Name:{{repo.owner.login}}</p>
               <p>Created: {{repo.created_at}}</p>
               <a href="{{repo.html_url}}">Go to repo</a>
         </ion-card-content>

@@ -28,7 +28,6 @@ export class HomePage {
     .subscribe(
       (data) => { 
         this.repos = data['items'];
-        console.log(this.repos)
       },
       (error) => {
         console.error(error);

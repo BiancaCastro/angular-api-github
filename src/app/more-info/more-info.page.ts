@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ApiService} from '../api.service';
+
 @Component({
   selector: 'app-more-info',
   templateUrl: './more-info.page.html',
   styleUrls: ['./more-info.page.scss'],
 })
 export class MoreInfoPage implements OnInit {
-  repo;
-  constructor(private route: ActivatedRoute) { }
+  repo:any;
+  constructor( protected apiService: ApiService) { 
+
+  }
 
   ngOnInit() {
-    this.route.params.subscribe(data => {
-      this.repo = data;
-      console.log(data)
-    })
+    this.repo = this.apiService.getDetail();
+    console.log(this.repo);
   }
 
 }
