@@ -1,6 +1,6 @@
 <ion-content class="content">
    
-  <ion-card *ngFor="let repo of resultList" class="example-card" (click)="change()">
+  <ion-card *ngFor="let repo of resultList" class="example-card" >
     <ion-card-header>
       <ion-card-title>{{repo.full_name| uppercase}}</ion-card-title>
     </ion-card-header>
@@ -9,12 +9,11 @@
         <ion-avatar item-start>
       <ion-img [src]="repo.owner.avatar_url"></ion-img>
     </ion-avatar>
-      <ion-card-subtitle></ion-card-subtitle>
      
       <p>Name:{{repo.owner.login}}</p>
      <a href="{{repo.html_url}}">Go to repo</a>
      <hr>
-     <ion-button color="secondary" size="small">More  info</ion-button>
+     <ion-button color="secondary" size="small" (click)="otraPagina(repo)">More info</ion-button>
     </ion-card-content>
   </ion-card>
 

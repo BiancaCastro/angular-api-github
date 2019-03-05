@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>more-info</ion-title>
+    <ion-title>Info details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+    <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Forks:{{repo.forks}}</ion-card-subtitle>
+          <ion-card-title>{{repo.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <ion-avatar item-start>
+                <ion-img [src]="repo.owner.avatar_url"></ion-img>
+              </ion-avatar>
+              <p>Name:{{repo.owner.login}}</p>
+              <p>Created: {{repo.created_at}}</p>
+              <a href="{{repo.html_url}}">Go to repo</a>
+        </ion-card-content>
+      </ion-card>
 
 </ion-content>
